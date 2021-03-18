@@ -17,6 +17,10 @@ class TrainingsController < ApplicationController
     end
   end
 
+  def search
+    @training = Training.search(params[:keyword])
+  end
+
   private
 
   def training_params

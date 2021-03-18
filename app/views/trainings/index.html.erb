@@ -1,15 +1,24 @@
 <%= render "shared/header" %>
-<h1>トレーニング管理ページです</h1>
 
-<div class="bg-white p-5">
-  <div class="container bg-white text-center">
+<div class="bg-white p-5 ">
+  <div class="bg-white m-3">
+    <h3 class="text-center">トレーニング管理ページです</h1>
+    <div class="text-center">
+      <%= form_with(url: search_trainings_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container bg-white text-center border border-dark">
     <% @training.each do |training| %>
-        <table class="table table-sm table-hover", style="table-layout:fixed">
+        <table class="table table-sm table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">日付</th>
-              <th scope="col">種目</th>
+              <th style="width:100px">#</th>
+              <th style="width:130px">日付</th>
+              <th style="width:400px">種目</th>
             </tr>
           </thead>
           <tbody>

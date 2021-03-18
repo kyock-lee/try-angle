@@ -10,7 +10,6 @@ class WeightsController < ApplicationController
 
   def create
     @weight = Weight.new(weight_params)
-    # binding.pry
     if @weight.save
       redirect_to action: 'index'
     else
