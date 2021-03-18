@@ -1,4 +1,4 @@
-class WeightController < ApplicationController
+class WeightsController < ApplicationController
 
   def index
     @weight = current_user.weights.includes(:user)
@@ -10,6 +10,7 @@ class WeightController < ApplicationController
 
   def create
     @weight = Weight.new(weight_params)
+    # binding.pry
     if @weight.save
       redirect_to action: 'index'
     else
