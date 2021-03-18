@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<h1>体重の推移</h1>
+<h3 class="text-center">体重の推移</h1>
 
 
 <%= line_chart @weight.group_by_day(:date, series: false).average(:weight),height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 80, curve: false %>
