@@ -20,7 +20,7 @@ class TrainingsController < ApplicationController
   private
 
   def training_params
-    params.require(:training).permit(:date,:category_id).merge(user_id: current_user.id)
+    params.require(:training).permit(:date,:description).merge(user_id: current_user.id)
   end
 
 
