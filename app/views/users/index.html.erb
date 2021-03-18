@@ -1,0 +1,71 @@
+<%= render "shared/header" %>
+  <div class="bg-light py-5 ">
+    <div class="container bg-white  py-5 my-5">
+      <!--メニュー一覧-->
+      <div>
+        <h2 class="text-center py-3">MENU</h2>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4 col-12">
+          <%= link_to("#") do %>
+            <img class="img-fluid" src="assets/record.jpg" alt="食事管理">
+          <% end %>
+          <h4 class="text-center">体重の記録</h4>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <%= link_to("#") do %>
+            <img class="img-fluid" src="assets/meal.jpg" alt="食事管理">
+          <% end %>
+          <h4 class="text-center">食事の記録</h4>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <%= link_to("#") do %>
+            <img class="img-fluid" src="assets/training.jpg" alt="トレーニング管理">
+          <% end %>
+          <h4 class="text-center">トレーニングの記録</h4>
+        </div>
+      </div>
+    </div>
+
+    <!--BODY MAINTENANCEの特徴-->
+
+    <div id="tab">
+      <h2 class="text-center py-3">BODY MAINTENANCEの特徴</h2>
+    </div>
+    <div class="tab">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item col-4 p-0" role="presentation">
+          <a class="nav-link active text-center" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">体重の管理</a>
+        </li>
+        <li class="nav-item col-4 p-0" role="presentation">
+          <a class="nav-link text-center" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">食事の管理</a>
+        </li>
+        <li class="nav-item col-4 p-0" role="presentation">
+          <a class="nav-link text-center" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">トレーニング管理</a>
+        </li>
+      </ul>
+      <div class="tab">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="col-md-8 col-12 my-5 mx-auto">
+              数値を入力することで、体重の変化をグラフにして確認することができます。
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="col-md-8 col-12 my-5 mx-auto">
+              毎日の食事を画像つきで記録することができます。写真のみの投稿も可能です。
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="col-md-8 col-12 my-5 mx-auto">
+              トレーニングの記録をつけることができます。プルダウン方式ですぐに入力ができます。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
