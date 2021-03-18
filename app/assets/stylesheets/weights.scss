@@ -1,0 +1,63 @@
+// Place all the styles related to the weights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 入力フォーム
+.input-weight-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.input-weight-container {
+  line-height: 50px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+}
+
+
+.input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+// 記録ボタン
+.input-btn {
+  width: 120px;
+  background: white;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.input-btn-text {
+  color:black;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.input-btn-icon {
+  width: 60%;
+}
+

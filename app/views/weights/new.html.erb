@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class="input-weight-main bg-light py-5 ">
+  <div class="input-container bg-white text-center">
+    <h3 class="input-weight-container">記録する</h3>
+    
+    <%= form_with(model: @weight, local: true) do |form| %>
+      <div class='input-wrap py-3 my-3 '>
+        <%= raw sprintf(
+                  form.date_select(
+                    :date,
+                    class:'select-birth',
+                    id:"date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2021,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+        <div class="input-weight">
+          <%= form.number_field :weight, step: "0.1", placeholder: "例) 55.5", rows: "10" %>
+          <span>kg</span>
+        </div>
+      <div class=" py-3 my-3">
+        <%= form.submit "送信" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
