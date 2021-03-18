@@ -1,32 +1,38 @@
 <%= render "shared/header" %>
-<h1>食事管理ページです</h1>
 
-<%= form_with(url: search_meals_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-
-
-
-<div class='meal-contents'>
-    <ul class='meal-list'>
-     <%# 食事の写真データ全てを展開 %>
-      <% @meals.each do |meal| %>
-        <li class='list'>
-          <div class='meal-lists p-3 m-3'>
-            <div class='item-img-content '>
-              <%= image_tag meal.image, class: "item-img" %>
-            </div>
-            <h3 class='item-date'>
-              <%= meal.date %>
-            </h3>
-            <div class="meal-description-box">
-              <span><%= meal.description %></span>
-            </div>
-          </div>
-        </li>
+<div class="bg-white">
+  <div class="bg-white m-3">
+    <h3 class="text-center">食事管理ページです</h1>
+    <div class="text-center">
+      <%= form_with(url: search_meals_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
       <% end %>
-    </ul>
+    </div>
+  </div>
+
+
+
+  <div class='meal-contents bg-white'>
+      <ul class='meal-list p-3'>
+      <%# 食事の写真データ全てを展開 %>
+        <% @meals.each do |meal| %>
+          <li class='list'>
+            <div class='meal-lists'>
+              <div class='item-img-content '>
+                <%= image_tag meal.image, class: "item-img" %>
+              </div>
+              <h3 class='item-date'>
+                <%= meal.date %>
+              </h3>
+              <div class="meal-description-box">
+                <span><%= meal.description %></span>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+  </div>
 </div>
 
 <%= link_to( new_meal_path, class: 'input-btn') do %>

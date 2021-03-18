@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+<h1>トレーニング管理ページです</h1>
+
+<div class="bg-white p-5">
+  <div class="container bg-white text-center">
+    <% @training.each do |training| %>
+        <table class="table table-sm table-hover", style="table-layout:fixed">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">日付</th>
+              <th scope="col">種目</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><%= training.date %></td>
+              <td><%= training.description %></td> 
+            </tr>
+          </tbody>
+        </table>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to(new_training_path, class: 'input-btn') do %>
+  <span class='input-btn-text'>記録する</span>
+  <%= image_tag 'input.jpg' , size: '185x50' ,class: "input-btn-icon" %>
+<% end %>
+
+<%= render "shared/footer" %>
