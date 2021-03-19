@@ -1,4 +1,5 @@
 class TrainingsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create, :search]
 
   def index
     @training = current_user.trainings.includes(:user).order('created_at DESC')
@@ -26,6 +27,5 @@ class TrainingsController < ApplicationController
   def training_params
     params.require(:training).permit(:date,:description).merge(user_id: current_user.id)
   end
-
 
 end

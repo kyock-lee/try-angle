@@ -1,4 +1,5 @@
 class MealsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create, :search]
 
   def index
     @meals = current_user.meals.includes(:user).order('created_at DESC')
