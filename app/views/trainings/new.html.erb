@@ -2,7 +2,7 @@
 
 <div class="input-weight-main bg-light py-5 ">
   <div class="input-container bg-white text-center">
-    <h3 class="input-weight-container">記録する</h3>
+    <h3 class="input-training-container ">記録する</h3>
     <%= form_with(model: @training, local: true) do |form| %>
       <div class='input-wrap py-3 my-3 '>
         <%= raw sprintf(
@@ -17,8 +17,8 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
       </div>
-        <%= form.text_area :description, class:"items-text", id:"item-info", placeholder:"トレーニングの内容" ,rows:"7" ,maxlength:"1000" %> 
-      <div class=" py-3 my-3">
+        <%= form.text_area :description, class:"trainings-text", id:"training-info", placeholder:"トレーニングの内容" ,rows:"7" ,maxlength:"1000" %> 
+      <div class=" py-3 my-3 ">
         <%= form.submit "送信" %>
       </div>
     <% end %>
