@@ -1,7 +1,7 @@
 class TrainingsController < ApplicationController
 
   def index
-    @training = current_user.trainings.includes(:user)
+    @training = current_user.trainings.includes(:user).order('created_at DESC')
   end
 
   def new
