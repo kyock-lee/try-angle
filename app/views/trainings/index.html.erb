@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
-<div class="bg-white p-5">
+<div class="bg-white">
   <div class="bg-white m-3">
-    <h3 class="text-center">トレーニング管理ページです</h1>
+    <h3 class="text-center">トレーニングの記録</h1>
     <div class="text-center">
       <%= form_with(url: search_trainings_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input bg-light" %>

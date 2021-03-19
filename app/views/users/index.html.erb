@@ -3,28 +3,28 @@
     <div class="container bg-white pb-5">
       <!--メニュー一覧-->
       <div>
-        <h2 class="text-center py-3">MENU</h2>
+      <u><h2 class="text-center py-3">MENU</h2></u>
       </div>
       <div class="row">
         <div class="col-md-4 col-12">
           <%= link_to(weights_path) do %>
             <img class="img-fluid border border-3 border-dark rounded" src="assets/record.jpg" alt="食事管理">
           <% end %>
-          <h4 class="text-center">体重の記録</h4>
+          <h4 class="text-center p-2">体重の記録</h4>
         </div>
 
         <div class="col-md-4 col-12">
           <%= link_to(meals_path) do %>
             <img class="img-fluid border border-3 border-dark rounded" src="assets/meal.jpg" alt="食事管理">
           <% end %>
-          <h4 class="text-center">食事の記録</h4>
+          <h4 class="text-center p-2">食事の記録</h4>
         </div>
 
         <div class="col-md-4 col-12">
           <%= link_to(trainings_path) do %>
             <img class="img-fluid border border-3 border-dark rounded" src="assets/training.jpg" alt="トレーニング管理">
           <% end %>
-          <h4 class="text-center">トレーニングの記録</h4>
+          <h4 class="text-center p-2">トレーニングの記録</h4>
         </div>
       </div>
     </div>
@@ -74,10 +74,6 @@
         </div>
       </div>
     </div>
-
-
-
-    
 
   </div>
 <%= render "shared/footer" %>
