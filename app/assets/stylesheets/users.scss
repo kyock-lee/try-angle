@@ -1,3 +1,42 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hero-container {
+  width: 100vw;
+  height: 60vh;
+  background-image: url(/assets/weight-lifting.jpg);
+  background: cover;
+}
+
+.hero-border {
+  display: block;
+  width: 100%;
+  height:1px;
+  background-color: black;
+}
+
+.catch-copy{
+  width: 100%;
+  line-height: 33vw;
+  font-size: 10vw;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// .title-menu-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .title-menu {
+//   width: 30%;
+//   font-size:3.5vh;
+//   border-bottom: 5px solid #1b44ac;
+
+// }
+
+.tab-head {
+  background-color: #1b44ac;
+}
