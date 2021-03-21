@@ -14,10 +14,10 @@
 
 
   <div class='container meal-contents bg-white '>
-      <ul class='meal-list row p-3'>
+      <ul class='meal-list row '>
       <%# 食事の写真データ全てを展開 %>
         <% @meals.each do |meal| %>
-          <li class='list p-3 m-3 col-md-3'>
+          <li class='list px-5 m-3 col-md-3 border border-3 border-dark rounded'>
             <div class='meal-lists'>
               <div class='item-img-content'>
                 <%= image_tag meal.image, class: "item-img" %>
