@@ -40,43 +40,47 @@
     <!--BODY MAINTENANCEの特徴-->
     <div class="py-5">
       <div id="tab", class="tab-head p-3 bg-dark">
-        <h3 class="text-center text-white">TRY-ANGLEの特徴</h2>
+        <h3 class="text-center text-white">TRY-ANGLEとは</h2>
       </div>
-      <div class="tab">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item col-4 p-0" role="presentation">
-            <a class="nav-link active text-center" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">体重の管理</a>
-          </li>
-          <li class="nav-item col-4 p-0" role="presentation">
-            <a class="nav-link text-center" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">食事の管理</a>
-          </li>
-          <li class="nav-item col-4 p-0" role="presentation">
-            <a class="nav-link text-center" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">トレーニング管理</a>
-          </li>
-        </ul>
+      <div class="tab-main">
         <div class="tab">
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="col-md-8 col-12 my-5 mx-auto text-center">
-                <h2 class="p-3">体重の変化をグラフで記録！</h2>
-                <h5 class="p-3">食事・トレーニング管理機能とあわせて、徹底的な管理！</h5>
-                <h5 class="p-3">入力の完了まで約５秒！体重計測後にすぐ記録ができる！</h5>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item col-6 p-0" role="presentation">
+              <a class="nav-link active text-center tab-contents" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">TRY-ANGLEの特徴</a>
+            </li>
+            <li class="nav-item col-6 p-0" role="presentation">
+              <a class="nav-link text-center tab-contents" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">使い方</a>
+            </li>
+            <%# <li class="nav-item col-4 p-0" role="presentation">
+              <a class="nav-link text-center tab-contents" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">トレーニング管理</a>
+            </li> %>
+          </ul>
+          <div class="tab">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-md-8 col-12 my-5 mx-auto text-center">
+                  <h2 class="p-3">体重・食事・トレーニングの徹底管理！</h2>
+                  <h5 class="p-3">簡単な入力作業で「体重・食事・トレーニング」を記録できます。</h5>
+                  <h5 class="p-3">毎日の体重の変化を、折れ線グラフにして確認する事ができます。</h5> 
+                  <h5 class="p-3">食事・トレーニングの記録は、一覧にして確認する事ができます。</h5> 
+                  <h5 class="p-3">過去の記録は、検索機能で振り返る事ができます。</h5> 
+                </div>
               </div>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div class="col-md-8 col-12 my-5 mx-auto text-center">
-                <h2 class="p-3">毎日の食事を画像付きで記録！</h2><br>
-                <h5 class="p-3">過去の食事は、検索で振り返りが可能！</h5>
-                <h5 class="p-3">ひとことメモに、気になった事も記録！</h5>
-                
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="col-md-8 col-12 my-5 mx-auto text-center">
+                  <h2 class="p-3">入力作業はわずか１０秒！</h2><br>
+                  <h5 class="p-3">①各項目の「記録する」から入力ページへ！</h5>
+                  <h5 class="p-3">②フォームの内容を記載して送信するだけ！</h5>
+                  <h5 class="p-3">気になった事はひとことメモに保存しよう！</h5>
+                </div>
               </div>
-            </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-              <div class="col-md-8 col-12 my-5 mx-auto text-center">
-                <h2 class="p-3">日々のトレーニングを記録！</h2><br>
-                <h5 class="p-3">記録したトレーニングは、全て一覧にして表示！</h5>
-                <h5 class="p-3">過去のトレーニングは、検索で振り返りが可能！</h5>
-              </div>
+              <%# <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="col-md-8 col-12 my-5 mx-auto text-center">
+                  <h2 class="p-3">日々のトレーニングを記録！</h2><br>
+                  <h5 class="p-3">記録したトレーニングは、全て一覧にして表示！</h5>
+                  <h5 class="p-3">過去のトレーニングは、検索で振り返りが可能！</h5>
+                </div>
+              </div> %>
             </div>
           </div>
         </div>

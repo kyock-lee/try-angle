@@ -21,7 +21,7 @@
           <div class="user_nav">
             <ul class="navbar-nav text-nowrap">
               <% if user_signed_in? %>
-                  <li class="user-name p-2  mx-4"><%= link_to current_user.nickname + %{さん}, "#"%></li>
+                  <li class="user-name p-2 mx-4"><%= link_to current_user.nickname + %{さん}, "#"%></li>
                   <li class="user-logout p-2 mx-4"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
               <% else %>
                   <li class="user-login p-2 mx-4"><%= link_to 'ログイン', new_user_session_path %></li> 
