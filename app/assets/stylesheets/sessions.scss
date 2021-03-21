@@ -4,12 +4,26 @@
   margin-top: 50px;
 }
 
-.login-red-btn {
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-blue-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
+  background-color: #07c;
+  color:white;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.guest-login-btn {
+  width: 100%;
+  color: black;
+  line-height: 48px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
   cursor: pointer;
 }
