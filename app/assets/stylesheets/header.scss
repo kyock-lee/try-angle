@@ -2,3 +2,47 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+
+
+.user_nav span:hover ul {
+  color: #07c;
+  display: block;
+}
+
+// .user_nav ul {
+//   // border:  3px solid #07c;
+//   // border-radius: 5px;
+// }
+
+.user-name {
+  font-weight: bold;
+  text-decoration: none;
+  background: #07c;
+  color:white;
+  border-radius: 5px;
+}
+
+.user-login {
+  font-weight: bold;
+  text-decoration: none;
+  background: #07c;
+  color:white;
+  border-radius: 5px;
+}
+
+.user-logout {
+  font-weight: bold;
+  text-decoration: none;
+  background: #07c;
+  color:white;
+  border-radius: 5px;
+}
+
+.user-registration {
+  font-weight: bold;
+  text-decoration: none;
+  background: #07c;
+  color:white;
+  border-radius: 5px;
+}
