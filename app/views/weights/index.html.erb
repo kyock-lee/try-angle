@@ -2,7 +2,7 @@
 <h3 class="text-center m-3">体重の記録</h1>
 
 <div class="mx-3 pb-5">
-  <%= line_chart @weight.group_by_day(:date, series: false).average(:weight),height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 80, curve: false %>
+  <%= line_chart @weight.group_by_day(:date, series: false).average(:weight),height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 120, curve: false %>
 </div>
 
 <%= link_to( new_weight_path, class: 'input-btn') do %>
