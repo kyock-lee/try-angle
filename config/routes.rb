@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :meals, only: [:index, :new, :create] do
+  resources :meals, only: [:index, :new, :create, :edit, :update] do
     collection do
       get 'search'
     end
