@@ -25,7 +25,10 @@
             <tr>
               <th scope="row">1</th>
               <td><%= training.date %></td>
-              <td><%= training.description %></td> 
+              <td> 
+                <%= training.description %>
+                <span><%= link_to '編集', edit_training_path(training.id), method: :get, class: "edit-btn p-1" %></span>
+              </td> 
             </tr>
           </tbody>
         </table>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :weights, only: [:index, :new, :create]
 
-  resources :trainings, only: [:index, :new, :create] do
+  resources :trainings, only: [:index, :new, :create, :edit, :update] do
     collection do
       get 'search'
     end
