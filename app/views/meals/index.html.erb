@@ -17,10 +17,10 @@
       <ul class='meal-list row '>
       <%# 食事の写真データ全てを展開 %>
         <% @meals.each do |meal| %>
-          <li class='list px-5 m-3 col-md-3 border border-3 border-dark rounded'>
+          <li class='list px-5 m-3 col-md-3'>
             <div class='meal-lists'>
               <div class='item-img-content'>
-                <%= image_tag meal.image, class: "item-img" %>
+                <%= image_tag meal.image, class: "item-img " %>
               </div>
               <h3 class='item-date'>
                 <%= meal.date %>
@@ -39,4 +39,5 @@
   <span class='input-btn-text'>記録する</span>
   <%= image_tag 'input.jpg' , size: '185x50' ,class: "input-btn-icon" %>
 <% end %>
+
 <%= render "shared/footer" %>

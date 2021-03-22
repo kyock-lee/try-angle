@@ -28,4 +28,9 @@
     </ul>
 </div>
 
+ <%= link_to( new_meal_path, class: 'input-btn') do %>
+    <span class='input-btn-text'>記録する</span>
+    <%= image_tag 'input.jpg' , size: '185x50' ,class: "input-btn-icon" %>
+  <% end %>
+
 <%= render "shared/footer" %>
