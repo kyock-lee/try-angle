@@ -5,6 +5,9 @@
     <h3 class="input-weight-container">記録する</h3>
 
     <%= form_with(model: @meal, local: true) do |form| %>
+
+      <%= render 'shared/error_messages', model: @meal %>
+
         <div>
           <%= form.file_field :image, id:"image" %>
         </div>

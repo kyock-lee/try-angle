@@ -4,6 +4,9 @@
   <div class="input-container bg-white text-center">
     <h3 class="input-training-container ">記録する</h3>
     <%= form_with(model: @training, local: true) do |form| %>
+
+      <%= render 'shared/error_messages', model: @training %>
+
       <div class='input-wrap py-3 my-3 '>
         <%= raw sprintf(
                   form.date_select(
