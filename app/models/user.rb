@@ -10,12 +10,21 @@ class User < ApplicationRecord
   
   with_options presence: true do
     validates :nickname
-    validates :family_name
-    validates :family_name_kana
-    validates :last_name
-    validates :last_name_kana
+
+    with_options format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/ } do
+      validates :family_name
+      validates :last_name
+    end
+
+    with_options format: { with: /\A[ァ-ヶー－]+\z/ } do
+      validates :family_name_kana
+      validates :last_name_kana
+    end
     validates :birthday
+    validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }
   end
+
+  
 
   def self.guest
     user = User.find_or_create_by!(email: 'guest@example.com') do |user|

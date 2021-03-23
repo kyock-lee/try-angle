@@ -5,5 +5,6 @@ class Meal < ApplicationRecord
 
   with_options presence: true do
     validates :date
+    validates :image
   end
 end
