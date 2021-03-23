@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :search, :edit, :update]
+  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update]
 
   def index
     @meals = current_user.meals.includes(:user).order('created_at DESC')
@@ -16,10 +16,6 @@ class MealsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def search
-    @meals = Meal.search(params[:keyword])
   end
 
   def edit

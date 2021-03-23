@@ -18,10 +18,6 @@ class TrainingsController < ApplicationController
     end
   end
 
-  def search
-    @training = Training.search(params[:keyword])
-  end
-
   def edit
     @training = Training.find(params[:id])
   end

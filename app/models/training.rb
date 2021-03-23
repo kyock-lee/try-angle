@@ -7,14 +7,4 @@ class Training < ApplicationRecord
     validates :date
     validates :description
   end
-
-  def self.search(search)
-    if search != ""
-      Training.where('date LIKE(?)', "%#{search}%")
-    else
-      Training.all
-    end
-  end
-
-
 end
