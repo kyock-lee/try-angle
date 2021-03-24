@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ご覧いただきありがとうございます。 テストユーザーはログインもしくは新規登録画面からボタン一つでログインできるようになっています。 是非そちらをご利用ください。
 
-Things you may want to cover:
+# TRY-ANGLE
+体重・食事・トレーニングといった３つの観点からトレーニーをサポートできるアプリケーションです。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# アプリケーションの概要
+・体重の管理          →  入力データを折線グラフ化し、体重推移を確認ができる
+・食事の管理          →  入力データを一覧表示し、過去の食事を振り返る事ができる
+・トレーニングの管理  →  入力データを一覧表示し、過去のトレーニングを振り返る事ができる
