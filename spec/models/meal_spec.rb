@@ -23,13 +23,13 @@ RSpec.describe Meal, type: :model do
       it '画像が添付されていないと記録できない' do
         @meal.image = nil
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Image can't be blank")
+        expect(@meal.errors.full_messages).to include("画像を入力してください")
       end
 
       it '日時を入力しないと記録できない' do
         @meal.date = ''
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Date can't be blank")
+        expect(@meal.errors.full_messages).to include("日付を入力してください")
       end
     end
   end

@@ -17,25 +17,25 @@ RSpec.describe Weight, type: :model do
       it '体重を入力しないと記録できない' do
         @weight.weight = ''
         @weight.valid?
-        expect(@weight.errors.full_messages).to include("Weight can't be blank")
+        expect(@weight.errors.full_messages).to include("体重を入力してください")
       end
 
       it '日付を入力しないと記録できない' do
         @weight.date = ''
         @weight.valid?
-        expect(@weight.errors.full_messages).to include("Date can't be blank")
+        expect(@weight.errors.full_messages).to include("日付を入力してください")
       end
 
       it '体重は、マイナスの値は記録できない' do
         @weight.weight = -10
         @weight.valid?
-        expect(@weight.errors.full_messages).to include("Weight must be greater than or equal to 0")
+        expect(@weight.errors.full_messages).to include("体重は0以上の値にしてください")
       end
 
       it '体重は、数値は以外は記録できない' do
         @weight.weight = '五十'
         @weight.valid?
-        expect(@weight.errors.full_messages).to include("Weight is not a number")
+        expect(@weight.errors.full_messages).to include("体重は数値で入力してください")
       end
 
     end
