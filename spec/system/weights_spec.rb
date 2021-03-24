@@ -52,6 +52,4 @@ RSpec.describe "Weights", type: :system do
       expect(current_path).to eq(weights_path)
     end
   end
-  
-
 end
