@@ -26,19 +26,11 @@ pass  : test123
 
 ①「体重の記録」アイコン、またはヘッダーの「体重の記録」から、体重の記録画面へ。<br>
 
-
-
 　![2e27cc29fb0dadd792b5b6fdd095a691](https://user-images.githubusercontent.com/78146812/112335187-5d03a080-8cff-11eb-9f25-a932a402badf.gif)
 
-
-
-
 ②「記録する」をクリック後、必要項目を入力して送信ボタンを押すと、データが２つ以上ある時、折れ線グラフが表示されます。
-
-
  
  ![cc75e06097fb6797e4efbaced6dc9efe](https://user-images.githubusercontent.com/78146812/112338994-9e497f80-8d02-11eb-9398-fbc6a6ba0e0f.gif)
-
 
 #### ◆食事管理機能
 
@@ -46,19 +38,19 @@ pass  : test123
 
 ![52857234600780a8e0f04f2cc7dca1a7](https://user-images.githubusercontent.com/78146812/112341646-f2556380-8d04-11eb-814b-44da4b4c6d7a.gif)
 
-
 ②「記録する」をクリック後、必要項目を入力して送信ボタンを押すと、入力内容が新しい順に一覧表示されます。
 
 ![e65866b1fdcfb60c64e34d6456cabc9f](https://user-images.githubusercontent.com/78146812/112342379-86272f80-8d05-11eb-9037-b329532fa0e3.gif)
 
-
 #### ◆トレーニング管理機能
+
 ①「トレーニングの記録」アイコン、またはヘッダーの「トレーニングの記録」から、トレーニングの記録画面へ。
 
+![cf65bcea4f2a7719d7ff0759b88b5f6e](https://user-images.githubusercontent.com/78146812/112344003-026e4280-8d07-11eb-97c8-be1e3a1ae531.gif)
 
 ②「記録する」をクリック後、必要項目を入力して送信ボタンを押すと、入力内容が新しい順に一覧表示されます。
 
- 
+![3fe94671c2b3f5a4761380f0d997af3c](https://user-images.githubusercontent.com/78146812/112344568-8e806a00-8d07-11eb-86c7-5a7e7fe0e2ca.gif)
 
 
 # 目指した課題解決
