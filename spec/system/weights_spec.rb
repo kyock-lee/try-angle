@@ -48,7 +48,7 @@ RSpec.describe "Weights", type: :system do
       expect{
         find('input[name="commit"]').click
       }.to change { Weight.count }.by(0)
-      # トップページへ遷移したことを確認する
+      # 記録入力ページに留まることを確認する
       expect(current_path).to eq(weights_path)
     end
   end
