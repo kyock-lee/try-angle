@@ -16,18 +16,14 @@ RSpec.describe Training, type: :model do
       it '日時がなければ記録ができない' do
         @training.date = ''
         @training.valid?
-        expect(@training.errors.full_messages).to include("Date can't be blank")
+        expect(@training.errors.full_messages).to include("日付を入力してください")
       end
 
       it 'トレーニングの説明がなければ記録ができない' do
         @training.description = ''
         @training.valid?
-        expect(@training.errors.full_messages).to include("Description can't be blank")
+        expect(@training.errors.full_messages).to include("トレーニング内容を入力してください")
       end
-
-
     end
   end
-
-
 end

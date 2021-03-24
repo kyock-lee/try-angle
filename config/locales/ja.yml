@@ -1,0 +1,19 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       family_name: 苗字
+       last_name: 名前
+       family_name_kana: 苗字(フリガナ)
+       last_name_kana: 名前(フリガナ)
+       birthday: 誕生日
+     weight:
+       weight: 体重
+       date: 日付
+     meal:
+       image: 画像
+       date: 日付
+     training:
+       date: 日付
+       description: トレーニング内容
