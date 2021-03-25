@@ -43,7 +43,7 @@ pass  : test123<br>
 
 ![e65866b1fdcfb60c64e34d6456cabc9f](https://user-images.githubusercontent.com/78146812/112342379-86272f80-8d05-11eb-9037-b329532fa0e3.gif)
 
-### ◆トレーニング管理機能
+### トレーニング管理機能
 
 ①「トレーニングの記録」アイコン、またはヘッダーの「トレーニングの記録」から、トレーニングの記録画面へ。
 
@@ -70,11 +70,74 @@ pass  : test123<br>
 ・各ページでの検索機能（日付やトレーニング項目）<br>
 
 # データベース設計
+## users
 
-# ローカルでの動作方法
+|Column              |Type    |Options                    |
+|--------------------|--------|---------------------------|
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| family_name        | string | null: false               |
+| last_name          | string | null: false               |
+| family_name_kana   | string | null: false               |
+| last_name_kana     | string | null: false               |
+| birthday           | date   | null: false               |
 
-# 
-# 
-# 
-# 
+### Association
+has_many :weights<br>
+has_many :meals<br>
+has_many :trainings
+
+
+## weights
+
+|Column              |Type         |Options                         |
+|--------------------|-------------|--------------------------------|
+| date               | date        | null: false                    |
+| weight             | integer     | null: false                    |
+| user               | references  | null: false, foreign_key: true |
+
+### Association
+belongs_to :user
+
+
+## meals
+
+|Column              |Type         |Options                         |
+|--------------------|-------------|--------------------------------|
+| date               | date        | null: false                    |
+| description        | text        |                                |
+| user               | references  | null: false, foreign_key: true |
+
+### Association
+belongs_to :user
+
+
+## trainings
+
+|Column              |Type         |Options                         |
+|--------------------|-------------|--------------------------------|
+| date               | date        | null: false                    |
+| description        | text        | null: false                    |
+| user               | references  | null: false, foreign_key: true |
+
+### Association
+belongs_to :user
+
+
+
+
+# 開発環境
++ VScode
++ Ruby 2.6.5
++ Rails 6.0.3.5
++ mysql2 5.6.5
++ HTML
++ CSS,SCSS
++ JavaScript
++ AWS
+
+
+# アプリケーションのクローン
+
 # 
