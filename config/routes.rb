@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "users#index"
 
+  get '/users', to: redirect("/users/sign_up")
+  
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
