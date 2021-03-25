@@ -143,7 +143,6 @@ belongs_to :user
 + HTML
 + CSS,SCSS
 + JavaScript
-+ AWS
 
 
 # アプリケーションのクローン
