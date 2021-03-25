@@ -19,7 +19,9 @@
 |投稿内容編集機能　|ログインしたユーザーは、食事内容・トレーニング内容の編集機能　　　　　 　　|
 
 # URL
-URLを記載
+https://try-angle.herokuapp.com/
+
+今後は、AWSを用いたデプロイを予定
 
 # テスト用アカウント
 email : test@example.com<br>
