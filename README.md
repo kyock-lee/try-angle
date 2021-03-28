@@ -21,7 +21,6 @@
 # URL
 https://try-angle.herokuapp.com/
 
-今後は、AWSを用いたデプロイを予定
 
 # テスト用アカウント
 email : test@example.com<br>
@@ -145,13 +144,5 @@ belongs_to :user
 + JavaScript
 
 
-# アプリケーションのクローン
-git clone https://github.com/kyock-lee/try-angle.git<br>
-cd try-angle<br>
-bundle install<br>
-yarn install<br>
-yarn add chartkick chart.js<br>
-rails db:create<br>
-rails db:migrate<br>
-rails s
+
 
