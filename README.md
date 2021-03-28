@@ -23,8 +23,6 @@ https://try-angle.herokuapp.com/
 
 
 # テスト用アカウント
-email : test@example.com<br>
-pass  : test123<br>
 
 テストユーザーは、ログイン画面からボタン一つでログインできるようになっています。 是非そちらをご利用ください。
 
