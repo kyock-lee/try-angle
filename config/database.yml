@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: body_management_production
-  username: body_management
-  password: <%= ENV['BODY_MANAGEMENT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
