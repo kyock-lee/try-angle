@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
-  resources :weights, only: [:index, :new, :create]
+  resources :weights, only: [:index, :new, :create, :edit, :update]
 
   resources :trainings, only: [:index, :new, :create, :edit, :update] do
     collection do
