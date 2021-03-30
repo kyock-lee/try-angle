@@ -18,6 +18,19 @@ class WeightsController < ApplicationController
     end
   end
 
+  def edit
+    @weight = Weight.find(params[:id])
+  end
+
+  def update
+    weight = Weight.find(params[:id])
+    if weight.update(weight_params)
+      redirect_to action: 'index'
+    else
+      render :edit
+    end    
+  end
+
   private
   def weight_params
     params.require(:weight).permit(:weight, :date).merge(user_id: current_user.id)
