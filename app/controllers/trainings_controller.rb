@@ -2,7 +2,7 @@ class TrainingsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :search, :edit, :update]
 
   def index
-    @training = current_user.trainings.includes(:user).order('created_at DESC')
+    @training = current_user.trainings.includes(:user).order('created_at DESC').limit(30)
   end
 
   def new
