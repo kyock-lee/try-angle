@@ -2,7 +2,7 @@ class MealsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update]
 
   def index
-    @meals = current_user.meals.includes(:user).order('created_at DESC')
+    @meals = current_user.meals.includes(:user).order('created_at DESC').limit(9)
   end
 
   def new
