@@ -25,7 +25,8 @@
               <% else %>
                 <% passed_block.call day, sorted_events.fetch(day, []) %>
                   <div>
-                    <a class="date_record" href="/meals">記録</a>
+                   <%= link_to "記録", "/user/#{current_user.id}" %>
+                    <%# <a class="date_record" href="/users/#{current_user.id}">記録</a> %>
                   </div>
               <% end %>
             <% end %>
