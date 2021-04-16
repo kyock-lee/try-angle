@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "users#index"
 
-  resources :users, only: [:index, :show]
-
   get '/users', to: redirect("/users/sign_up")
   
   devise_for :users, controllers: {
@@ -13,7 +11,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
-  resources :user, only: [:show]
+  resources :users, only: [:show]
 
   resources :weights, only: [:index, :new, :create, :edit, :update]
 
