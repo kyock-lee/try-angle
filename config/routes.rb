@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "users#index"
 
-  resources :user, only: [:index, :show]
+  resources :users, only: [:index, :show]
 
   get '/users', to: redirect("/users/sign_up")
   
