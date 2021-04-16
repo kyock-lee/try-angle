@@ -8,6 +8,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <%# カレンダー上部の曜日を表示 %>
         <% date_range.slice(0, 7).each do |day| %>
           <th><%= t('date.abbr_day_names')[day.wday] %></th>
         <% end %>
@@ -23,6 +24,9 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>
                 <% passed_block.call day, sorted_events.fetch(day, []) %>
+                  <div>
+                    <a class="date_record" href="/meals">記録</a>
+                  </div>
               <% end %>
             <% end %>
           <% end %>
