@@ -1,13 +1,14 @@
-<div class="simple-calendar">
-  <div class="calendar-heading">
-    <%= link_to t('simple_calendar.previous', default: '前月'), calendar.url_for_previous_view, %>
-    <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
-    <%= link_to t('simple_calendar.next', default: '次月'), calendar.url_for_next_view, %>
+<div class="simple-calendar pt-3">
+  <div class="calendar-heading bg-dark">
+    <%= link_to t('simple_calendar.previous', default: '前月'), calendar.url_for_previous_view, class: "month-change"%>
+    <span class="calendar-title text-white"><%= "#{start_date.year}年" %><%= t('date.month_names')[start_date.month] %> </span>
+    <%= link_to t('simple_calendar.next', default: '次月'), calendar.url_for_next_view, class: "month-change"%>
   </div>
 
   <table class="table table-striped">
     <thead>
       <tr>
+        <%# カレンダー上部の曜日を表示 %>
         <% date_range.slice(0, 7).each do |day| %>
           <th><%= t('date.abbr_day_names')[day.wday] %></th>
         <% end %>
@@ -23,6 +24,9 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>
                 <% passed_block.call day, sorted_events.fetch(day, []) %>
+                  <div>
+                    <a class="date_record" href="/meals">記録</a>
+                  </div>
               <% end %>
             <% end %>
           <% end %>

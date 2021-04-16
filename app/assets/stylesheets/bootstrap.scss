@@ -215,6 +215,9 @@ a {
 a:hover {
   color: #0a58ca;
 }
+.date_record {
+  color: black;
+}
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
