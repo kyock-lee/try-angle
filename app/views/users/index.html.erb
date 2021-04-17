@@ -40,13 +40,13 @@
     </div>
 
     <%# カレンダー機能 %>
-
+  <% if user_signed_in?%>
     <div class="m-3 p-3">
       <%= month_calendar do |date| %>
         <%= date.day %>
       <% end %>
     </div>
-    
+  <% end %>
     <%# カレンダー機能 %>
 
     <!--BODY MAINTENANCEの特徴-->
