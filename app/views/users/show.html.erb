@@ -7,14 +7,63 @@
 
   <h4 class="text-center m-3">
     <%= "体重の記録" %>
+    <div class="mx-3 pb-5">
+      <%= line_chart @weight.group_by_day(:date, series: false).average(:weight), height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 120, curve: false %>
+    </div>
   </h4>
 
   <h4 class="text-center m-3">
     <%= "食事の記録" %>
+    <div class='container meal-contents bg-white '>
+      <ul class='meal-list row '>
+      <%# 食事の写真データ全てを展開 %>
+        <% @meals.each do |meal| %>
+          <li class='list px-5 m-3 col-md-3 '>
+            <div class='meal-lists'>
+              <div class='meal-img-content'>
+                <%= image_tag meal.image, class: "item-img " %>
+              </div>
+              <h3 class='meal-date p-1'>
+                <%= meal.date %>
+              </h3>
+              <div class="meal-description-box p-1">
+                <span><%= meal.description %></span>
+              </div>
+              <div class="edit-main p-1">
+                <%= link_to '編集', edit_meal_path(meal.id), method: :get, class: "edit-btn p-1" %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+  </div>
   </h4>
 
   <h4 class="text-center m-3">
     <%= "トレーニングの記録" %>
+      <div class="container bg-white text-center border border-dark mb-3">
+        <% @training.each do |training| %>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th style="width:100px">#</th>
+                <th style="width:130px">日付</th>
+                <th style="width:400px">種目</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><%= training.date %></td>
+                <td> 
+                  <%= training.description %>
+                  <span><%= link_to '編集', edit_training_path(training.id), method: :get, class: "edit-btn p-1" %></span>
+                </td> 
+              </tr>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
   </h4>
 
 
