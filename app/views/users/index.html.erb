@@ -44,6 +44,7 @@
     <div class="m-3 p-3">
       <%= month_calendar do |date| %>
         <%= date.day %>
+        <%= link_to "記録", user_path(date, @meal, @training, @weight), class: "date_record" %>
       <% end %>
     </div>
   <% end %>
