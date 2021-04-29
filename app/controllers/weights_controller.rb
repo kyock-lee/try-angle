@@ -2,7 +2,7 @@ class WeightsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :search]
 
   def index
-    @weight = current_user.weights.includes(:user)
+    @weight = current_user.weights.includes(:user).order('date DESC')
   end
 
   def new
