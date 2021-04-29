@@ -1,16 +1,20 @@
 class UsersController < ApplicationController
+  
  
   def index
   end
 
   def new
     @weight = Weight.new
+    @meal = Meal.new
+    @training = Training.new
   end
 
   def show
-    @user = User.find(params[:id])
-    @meal = Meal.find(params[:id])
-    @weight = Weight.find_by(id: params[:format])
+    @meal = Meal.where(date: params[:id]).order('created_at DESC')
+    @weight = Weight.where(date: params[:id]).order('created_at DESC')
+    @training = Training.where(date: params[:id]).order('created_at DESC')
+  
   end
 
   private

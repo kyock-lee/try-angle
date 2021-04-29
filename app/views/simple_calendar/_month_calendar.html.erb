@@ -24,10 +24,6 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>
                 <% passed_block.call day, sorted_events.fetch(day, []) %>
-                  <div>
-                    <%= %>
-                    <%= link_to "記録", "/users/#{current_user.id}", class: "date_record" %>
-                  </div>
               <% end %>
             <% end %>
           <% end %>
