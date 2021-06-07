@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_03_18_091633) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.float "weight"
-    t.date "date"
+    t.date "date", null: false
     t.index ["user_id"], name: "index_weights_on_user_id"
   end
 
