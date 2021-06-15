@@ -6,42 +6,39 @@
     </div>
   </div>
   
-  <div class="bg-white pt-5">
-    <div class="container bg-white pb-5">
+  <div class="bg-white ">
+    <div class="container bg-white ">
       <!--メニュー一覧-->
       <div class="title-menu-container">
         <u><h2 class="title-menu text-center py-3">MENU</h2></u>
       </div>
-      <div class="row">
+      <div class="row ">
         <div class="col-md-4 col-12">
           <%= link_to(weights_path) do %>
-            <%= image_tag asset_path("record.jpg", alt: "体重管理"), class: "img-fluid border border-3 border-dark rounded" %>
-            <%# <img class="img-fluid border border-3 border-dark rounded" src="assets/record.jpg" alt="食事管理"> %>
+            <%= image_tag asset_path("record.jpg", alt: "体重管理"), class: "img-fluid-ad border border-3 border-dark rounded" %>
           <% end %>
-          <h4 class="text-center p-2">体重の記録</h4>
+          <h6 class="text-center p-2">体重</h6>
         </div>
 
         <div class="col-md-4 col-12">
           <%= link_to(meals_path) do %>
-            <%= image_tag asset_path("meal.jpg", alt: "食事管理"), class: "img-fluid border border-3 border-dark rounded" %>
-            <%# <img class="img-fluid border border-3 border-dark rounded" src="assets/meal.jpg" alt="食事管理"> %>
+            <%= image_tag asset_path("meal.jpg", alt: "食事管理"), class: "img-fluid-ad border border-3 border-dark rounded" %>
           <% end %>
-          <h4 class="text-center p-2">食事の記録</h4>
+          <h6 class="text-center p-2">食事</h6>
         </div>
 
         <div class="col-md-4 col-12">
           <%= link_to(trainings_path) do %>
-            <%= image_tag asset_path("training.jpg", alt: "トレーニング管理"), class: "img-fluid border border-3 border-dark rounded" %>
-            <%# <img class="img-fluid border border-3 border-dark rounded" src="assets/training.jpg" alt="トレーニング管理"> %>
+            <%= image_tag asset_path("training.jpg", alt: "トレーニング管理"), class: "img-fluid-ad border border-3 border-dark rounded" %>
           <% end %>
-          <h4 class="text-center p-2">トレーニングの記録</h4>
+          <h6 class="text-center p-2">トレーニング</h6>
         </div>
       </div>
     </div>
 
     <%# カレンダー機能 %>
   <% if user_signed_in?%>
-    <div class="m-3 p-3">
+    <div class="mx-3">
       <%= month_calendar do |date| %>
         <%= date.day %><br>
         <%= link_to "記録", user_path(date, @meal, @training, @weight), class: "date_record" %>
