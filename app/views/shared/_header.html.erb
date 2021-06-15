@@ -1,10 +1,13 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-          <a class="navbar-brand text-dark" href="/">TRYVE</a>
-          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+
+            <button class="navbar-toggler bg-white mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          <a class="navbar-brand text-dark" href="/">T R Y V E </a>
+           
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -21,11 +24,11 @@
           <div class="user_nav">
             <ul class="navbar-nav text-nowrap">
               <% if user_signed_in? %>
-                  <li class="user-name p-2 mx-4"><%= link_to current_user.nickname + %{さん}, "#"%></li>
-                  <li class="user-logout p-2 mx-4"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                  <li class="user-name  mx-4 mb-2"><%= link_to current_user.nickname + %{さん}, "#"%></li>
+                  <li class="user-logout mx-4"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                  <li class="user-login p-2 mx-4"><%= link_to 'ログイン', new_user_session_path %></li> 
-                  <li class="user-registration p-2 mx-4"><%= link_to '新規登録', new_user_registration_path %></li>
+                  <li class="user-login mx-2 mb-2"><%= link_to 'ログイン', new_user_session_path %></li> 
+                  <li class="user-registration mx-2"><%= link_to '新規登録', new_user_registration_path %></li>
               <% end %>
             </ul>
           </div>
