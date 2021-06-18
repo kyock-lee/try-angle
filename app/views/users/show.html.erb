@@ -10,7 +10,7 @@
     <div class="mx-3 pb-3">
       <div class="container bg-white text-center border border-dark mb-3">
         <% @weight.reverse_each do |weight| %>
-            <table class="table table-sm table-hover">
+            <table class="table table-sm table-hover table-font">
               <thead>
                 <tr>
                   <th style="width:100px">#</th>
@@ -21,7 +21,7 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><%= weight.date %></td>
+                    <td nowrap><%= weight.date %></td>
                   <td> 
                     <%= weight.weight %>
                   </td> 
@@ -38,7 +38,7 @@
     <div class="bg-white m-3">
       <h3 class="text-center">食事の記録</h3>
     </div>
-    <div class='container meal-contents bg-white border border-dark mb-3'>
+    <div class='container meal-contents bg-white border border-dark mb-3 '>
         <ul class='meal-list row '>
         <%# 食事の写真データ全てを展開 %>
           <% @meal.each do |meal| %>
@@ -67,9 +67,9 @@
       <h3 class="text-center">トレーニングの記録</h1>
     </div>
 
-    <div class="container bg-white text-center border border-dark mb-3">
+    <div class="container bg-white text-center border border-dark mb-3 ">
       <% @training.each do |training| %>
-        <table class="table table-sm table-hover">
+        <table class="table table-sm table-hover ">
           <thead>
             <tr>
               <th style="width:100px">#</th>
@@ -80,7 +80,7 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td><%= training.date %></td>
+              <td nowrap><%= training.date %></td>
               <td> 
                 <%= training.description %>
               </td> 
