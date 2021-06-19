@@ -6,31 +6,54 @@
   </h3>
 
   
-  <h3 class="text-center pb-3">体重の記録</h3>
-    <div class="mx-3 pb-3">
-      <div class="container bg-white text-center border border-dark mb-3">
-        <% @weight.reverse_each do |weight| %>
-            <table class="table table-sm table-hover table-font">
-              <thead>
-                <tr>
-                  <th style="width:100px">#</th>
-                  <th style="width:130px">日付</th>
-                  <th style="width:400px">体重</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                    <td nowrap><%= weight.date %></td>
-                  <td> 
-                    <%= weight.weight %>
-                  </td> 
-                </tr>
-              </tbody>
-            </table>
-        <% end %>
-      </div>
-    </div>
+<h3 class="text-center m-3">体重(kg)</h3>
+<div class="mx-3 pb-3">
+  <%= line_chart @weight.group_by_day(:date, series: false).average(:weight), height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 120, curve: false %>
+</div>
+
+<h3 class="text-center m-3">体脂肪率(%)</h3>
+<div class="mx-3 pb-3">
+  <%= line_chart @weight.group_by_day(:date, series: false).average(:body_fat), height: "400px",xtitle: "日", ytitle: "体脂肪率",min: 5, max: 50, curve: false %>
+</div>
+
+<h3 class="text-center m-3">筋肉量(kg)</h3>
+<div class="mx-3 pb-3">
+  <%= line_chart @weight.group_by_day(:date, series: false).average(:muscle_mass), height: "400px",xtitle: "日", ytitle: "筋肉量",min: 5, max: 50, curve: false %>
+</div>
+
+  <div class="container bg-white text-center border border-dark mb-3">
+    <% @weight.reverse_each do |weight| %>
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr class="table-category">
+              <th style="width:100px">#</th>
+              <th style="width:130px">日付</th>
+              <th style="width:400px">体重(kg)</th>
+              <th style="width:400px">体脂肪(%)</th>
+              <th style="width:400px">筋肉量(kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-content-txt">
+              <th scope="row">1</th>
+              <td nowrap><%= weight.date %></td>
+              <td nowrap> 
+                <%= weight.weight %>
+              </td> 
+
+              <td nowrap> 
+                <%= weight.body_fat %>
+              </td> 
+
+              <td nowrap> 
+                <%= weight.muscle_mass %>
+              </td> 
+
+            </tr>
+          </tbody>
+        </table>
+    <% end %>
+  </div>
 
 
   <%# 食事の記録 %>

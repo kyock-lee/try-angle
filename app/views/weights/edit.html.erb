@@ -21,10 +21,22 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
       </div>
+        
         <div class="input-weight">
+          <div class="">体重</div>
           <%= form.number_field :weight, step: "0.1", placeholder: "例) 55.5", rows: "10" %>
           <span>kg</span>
+
+          <div class="">体脂肪</div>
+          <%= form.number_field :body_fat, step: "0.1", placeholder: "例) 22.5", rows: "10" %>
+          <span>%</span>
+
+          <div class="">筋肉量</div>
+          <%= form.number_field :muscle_mass, step: "0.1", placeholder: "例) 15.5", rows: "10" %>
+          <span>kg</span>
+
         </div>
+
       <div class="login-btn py-3 my-3">
         <%= form.submit "送信", class: "login-blue-btn"%>
       </div>
