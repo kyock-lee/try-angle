@@ -33,7 +33,7 @@ class WeightsController < ApplicationController
 
   private
   def weight_params
-    params.require(:weight).permit(:weight, :date).merge(user_id: current_user.id)
+    params.require(:weight).permit(:weight, :date, :body_fat, :muscle_mass).merge(user_id: current_user.id)
   end
 
 

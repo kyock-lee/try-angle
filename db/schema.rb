@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2021_03_18_091633) do
     t.bigint "user_id", null: false
     t.float "weight"
     t.date "date", null: false
+    t.float "muscle_mass"
+    t.float "body_fat"
     t.index ["user_id"], name: "index_weights_on_user_id"
   end
 
